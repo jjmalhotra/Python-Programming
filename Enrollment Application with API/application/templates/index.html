@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="main">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h1>Welcome to Aashni Tech Academy.</h1>
+
+            {% if session['username'] %}
+                <h3>Let's get started.</h3><br>
+            {% else %}
+                <h5>Already registered? <a href="{{ url_for('login') }}">Login</a></h5>
+            {% endif %}
+            </div>
+    </div>
+
+    <div>
+        <h3>We offer the following courses: </h3><br>
+            <div class="wrapper">
+            <div>
+                <h4>Front end technologies</h4>
+            </div>
+            <div>
+                <ul>
+                <li class="disp">HTML</li>
+                <li class="disp">CSS</li>
+                <li class="disp">JavaScript</li>
+                <li class="disp">React JS</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Back end technologies</h4>
+            </div>
+            <div>
+                <ul>
+                <li class="disp">Python</li>
+                <li class="disp">Python Framework - Flask</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Others</h4>
+            </div>
+            <div>
+                <ul>
+                <li class="disp">Containers - Docker</li>
+                <li class="disp">Jira</li>
+                <li class="disp">GitHub</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+
+
